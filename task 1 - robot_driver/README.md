@@ -13,7 +13,7 @@ Automates a browser to:
 3. Find a product by name
 4. Print its price, or a clear failure message
 
-## Setup
+## Setup and How to run
 
 ```
 # 1. install requirements
