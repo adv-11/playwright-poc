@@ -35,18 +35,18 @@ def run() -> int:
             page = context.new_page()
             page.set_default_timeout(TIMEOUT_MS)
 
-            # Go to login
+            # go to login
             page.goto(SAUCE_URL, wait_until="domcontentloaded")
 
-            # Log in
+            # log in
             page.fill(SEL_USERNAME, USERNAME)
             page.fill(SEL_PASSWORD, PASSWORD)
             page.click(SEL_LOGIN_BTN)
 
-            # Wait for inventory page to load
+            # wait for inventory page to load
             page.locator(SEL_INVENTORY_LIST).wait_for(state="visible", timeout=TIMEOUT_MS)
 
-            # Find the product card by name
+            # find the product card by name
             product_cards = page.locator(SEL_ITEM).filter(
                 has=page.locator(SEL_ITEM_NAME, has_text=PRODUCT_NAME)
             )
@@ -57,7 +57,7 @@ def run() -> int:
                 browser.close()
                 return 1
 
-            # 4) Read its price
+            #  read its price
             price_text = product_cards.first.locator(SEL_ITEM_PRICE).inner_text(timeout=TIMEOUT_MS).strip()
             if not price_text:
                 print(f"FAILURE: Price for '{PRODUCT_NAME}' could not be read.")
