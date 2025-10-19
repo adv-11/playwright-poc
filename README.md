@@ -6,6 +6,7 @@ This repository contains code for:
    2. Optional Challenge 1: The AI Brain with MCP (Advanced Skills)
    3. Optional Challenge 2: Making It Shareable (Deployment Skills)
 
+--- 
 
 Find Code + Output Screenshots + Readme files inside each task file
 
