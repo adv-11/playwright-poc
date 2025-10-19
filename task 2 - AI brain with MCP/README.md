@@ -1,4 +1,4 @@
-# Web Automation Agent with Gemini & MCP
+# AI Brain with MCP : Task automation with google gemini and playwright mcp
 
 A simple web automation agent that uses Google's Gemini AI to navigate websites and complete tasks autonomously using the Model Context Protocol (MCP) with Playwright.
 
@@ -18,7 +18,7 @@ This agent can:
 - Extract information from pages
 - Make decisions based on page content
 
-The agent uses Gemini 2.0 Flash as the reasoning engine and Playwright (via MCP) for browser automation.
+The agent uses Gemini 2.5 Flash as the reasoning engine and Playwright (via MCP) for browser automation.
 
 ## How It Works
 
@@ -75,31 +75,6 @@ Enter a goal (or press Enter to use a small demo goal):
 - "Add two items to cart and tell me the total"
 - "Navigate to the about page and summarize the content"
 
-## Configuration
-
-Edit these variables in the script:
-
-- `MODEL` - Gemini model to use (default: "gemini-2.0-flash-exp")
-- `MAX_STEPS` - Maximum automation steps (default: 15)
-- `HEADLESS` - Run browser without GUI (default: True)
-- `DEFAULT_START_URL` - Starting URL (default: "https://www.saucedemo.com/")
-
-## Output
-
-The agent will print:
-
-- Each step and action taken
-- Tool results and responses
-- Final success/failure message with requested information
-
-Example output:
-
-```
-Step 1: Calling browser_navigate with {'url': 'https://www.saucedemo.com/'}
-Step 2: Calling browser_type with {'element': 'username', 'ref': 'e11', 'text': 'standard_user'}
-...
-→ Success: The price of Sauce Labs Backpack is $29.99
-```
 
 ## Notes
 
